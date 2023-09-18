@@ -250,7 +250,7 @@ export abstract class BaseCliCommand<T extends ICommandArgs> {
         return bucketName;
     }
 
-    protected parseCfnParameters(commandParameters?: string | undefined | {}): Record<string, string> {
+    protected parseCfnParameters(commandParameters?: string | undefined | Record<string, string>): Record<string, string> {
 
         if (typeof commandParameters === 'object') {
             return commandParameters;
